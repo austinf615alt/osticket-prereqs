@@ -18,9 +18,9 @@ This project outlines the prerequisites and installation of the open-source help
 <h2>List of Prerequisites</h2>
 
 - Internet Information Services (IIS)
-- PHP Manager
+- PHP Manager for IIS
 - Rewrite Module
-- vc.redist.x86.exe 
+- PHP 7.3.8 
 - MySQL 5.5.62
 - HeidiSQL
 
@@ -40,7 +40,9 @@ This project outlines the prerequisites and installation of the open-source help
 <img width="2191" height="1115" alt="LAB2-osTicketSetup" src="https://github.com/user-attachments/assets/cf651302-331d-4178-898e-b19a7cd51dca" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- Installed Internet Information Services (IIS) with required components such as World Wide Web Services and Application Development Features with CGI enabled. Verfified IIS functionality using loopback address in browser.
+
 </p>
 <br />
 
@@ -48,7 +50,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img width="2403" height="1216" alt="LAB2-osTicketSetup3" src="https://github.com/user-attachments/assets/30254f76-f097-4bb6-863d-b088caece245" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+- Installed and configured the required components to host osTicket on a web server:
+  - PHP Manager for IIS
+  - Rewrite Module
+  - PHP 7.3.8 (extracted to a newly made directory: C:\PHP)
+  - Visual C++ Redistributable (x86)
+  - MySQL 5.5.62
+ 
+- Configured PHP within IIS and restarted IIS services to apply changes.
+
+- Deployed and configured osTicket v.1.15.8 on IIS by placing application files in the IIS web server directory (C:\inetpub\wwwroot) for hosting, renaming and organizing application files in appropriate directories, and configuring IIS to allow web access to osTicket.
+
+- Enabled required PHP extensions for full application compatibility and configured file permissions to support osTicket functionality.
+
 </p>
 <br />
 
@@ -56,3 +71,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img width="2403" height="1216" alt="Lab2-osTicketSetupEnd" src="https://github.com/user-attachments/assets/ab1234a0-3e69-4947-8d81-128a83ee0440" />
 </p> 
 <p>
+
+- Installed HeidiSQL and created a new database for osTicket, then setting up osTicket with database credentials and fully installed osTicket on system.
