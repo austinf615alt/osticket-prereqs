@@ -30,7 +30,9 @@ This project outlines the prerequisites and installation of the open-source help
 <img width="2560" height="1277" alt="image" src="https://github.com/user-attachments/assets/5ad5484c-f8f2-45e6-acad-7293e4d15511" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- Configured and deployed a Windows Virtual Machine within Azure named osTicketSys using a Windows Server 2025 Datacenter X64 Gen2 image. Used Remote Desktop Connection to remote into Virutal Machine using VM public IP address and administrator account.
+
 </p>
 <br />
 
