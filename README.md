@@ -27,13 +27,13 @@ This project outlines the prerequisites and installation of the open-source help
 
 <h2>High-level Overview</h2>
 
-- 1. Created an Azure resource group and deployed a Windows Server 2025 virtual machine to host the osTicket environment.
-- 2. Connected to the VM using Remote Desktop and prepared the environment for web application hosting.
-- 3. Installed and configured Internet Information Services, PHP, CGI, and required dependencies for osTicket functionality.
-- 4. Configured MySQL and created a database for ticket storage and management.
-- 5. Deployed and configured the osTicket help desk platform within the IIS web server environment.
-- 6. Enabled required PHP extensions and adjusted file permissions to complete application setup.
-- 7. Verified successful installation by accessing the osTicket admin and end-user web portals.
+- Step 1: Created an Azure resource group and deployed a Windows Server 2025 virtual machine to host the osTicket environment
+- Step 2: Connected to the VM using Remote Desktop and prepared the environment for web application hosting.
+- Step 3: Installed and configured Internet Information Services, PHP, CGI, and required dependencies for osTicket functionality.
+- Step 4: Configured MySQL and created a database for ticket storage and management.
+- Step 5: Deployed and configured the osTicket help desk platform within the IIS web server environment.
+- Step 6: Enabled required PHP extensions and adjusted file permissions to complete application setup.
+- Step 7: Verified successful installation by accessing the osTicket admin and end-user web portals.
 
 ## Step 1: Virtual Machine Creation:
 
