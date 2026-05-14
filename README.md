@@ -17,12 +17,12 @@ This project outlines the prerequisites and installation of the open-source help
 
 <h2>List of Prerequisites</h2>
 
-- Internet Information Services (IIS): Hosted the osTicket web application on the Windows Server Environment.
+- Internet Information Services (IIS): Hosted the osTicket web application within the Windows Server Environment.
 - PHP Manager for IIS: Configured and managed PHP integration within IIS.
 - Rewrite Module: Enabled URL handling and web application routing functionality for osTicket
 - PHP: Powered the backend functionality of the osTicket application.
 - VC Redistributable: Installed required runtime dependencies for PHP and related components.
-- MySQL: Stored osTicker user, ticket, and configuration data.
+- MySQL: Stored osTicket user, ticket, and configuration data.
 - HeidiSQL: Managed and configured the MySQL database used by osTicket.
 
 <h2>High-level Overview</h2>
