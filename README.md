@@ -546,3 +546,41 @@ This project outlines the prerequisites and installation of the open-source help
 <br />
 
 ---
+
+## Skills Developed
+
+### Microsoft Azure Virtual Machine Deployment
+
+Created and configured a Windows Server virtual machine within Microsoft Azure, gaining hands-on experience with cloud-hosted infrastructure and remote system management.
+
+### Windows Server Administration
+
+Worked within a Windows Server environment to configure system settings, manage server roles, and prepare the environment for hosting a web application.
+
+### Web Server Configuration (IIS)
+
+Installed and configured Internet Information Services (IIS), enabling required web server features and validating successful local web hosting functionality.
+
+### PHP and Application Dependency Configuration
+
+Installed and configured PHP, PHP Manager for IIS, and additional application dependencies required to support the osTicket web application.
+
+### MySQL Database Configuration
+
+Installed and configured a MySQL database server, created a database for osTicket, and connected the application to the database using HeidiSQL.
+
+### Web Application Deployment
+
+Deployed the osTicket help desk platform within the IIS web server environment, configuring application files, required extensions, and installation settings.
+
+### File Permissions and Security Awareness
+
+Configured NTFS file permissions required for application setup while developing an understanding of least privilege principles and the importance of secure permission management in production environments.
+
+### Troubleshooting and System Validation
+
+Validated web server functionality, resolved missing dependency issues, and verified successful deployment through testing and confirmation of application behavior.
+
+### Technical Documentation
+
+Documented the deployment and configuration process using step-by-step technical documentation, screenshots, and written explanations to clearly communicate infrastructure setup procedures and outcomes.
