@@ -17,29 +17,33 @@ This project outlines the prerequisites and installation of the open-source help
 
 <h2>List of Prerequisites</h2>
 
-- Internet Information Services (IIS): Hosted the osTicket web application within the Windows Server Environment.
-- PHP Manager for IIS: Configured and managed PHP integration within IIS.
-- Rewrite Module: Enabled URL handling and web application routing functionality for osTicket
-- PHP: Powered the backend functionality of the osTicket application.
-- VC Redistributable: Installed required runtime dependencies for PHP and related components.
-- MySQL: Stored osTicket user, ticket, and configuration data.
-- HeidiSQL: Managed and configured the MySQL database used by osTicket.
+- Internet Information Services (IIS): Provides the web server environment used to host the osTicket web application.
+- PHP Manager for IIS: Enables configuration and integration of PHP within IIS to support server-side processing for osTicket
+- Rewrite Module: Handles URL routing and rewriting to support proper navigation and functionality within the web application. 
+- PHP: Server-side scripting language used to run the osTicket application logic.
+- VC Redistributable: Provides required runtime libraries needed for PHP and related components to function correctly.
+- MySQL: Relational database used to store osTicket data such as tickets, users, and system configurations.
+- HeidiSQL: Database management tool used to create and manage the MySQL database for osTicket.
 
 <h2>High-level Overview</h2>
 
-- Step 1: Created an Azure resource group and deployed a Windows Server 2025 virtual machine to host the osTicket environment
-- Step 2: Connected to the VM using Remote Desktop and prepared the environment for web application hosting.
-- Step 3: Installed and configured Internet Information Services, PHP, CGI, and required dependencies for osTicket functionality.
-- Step 4: Configured MySQL and created a database for ticket storage and management.
-- Step 5: Deployed and configured the osTicket help desk platform within the IIS web server environment.
-- Step 6: Enabled required PHP extensions and adjusted file permissions to complete application setup.
-- Step 7: Verified successful installation by accessing the osTicket admin and end-user web portals.
+- Section 1: VM Deployment - Covers the configuration and deployment of a Windows Server virtual machine in Microsoft Azure.
+  
+- Section 2: Web Server and Application Stack Setup. - Installed and configured Internet Information Services (IIS) and osTicket dependencies for web app hosting.
+
+- Section 3: Database Configuration - Installed and configured MySQL, creating and connecting a database used by osTicket for ticket and user data storage.
+  
+- Section 4: osTicket Deployment and Configuration. - Deployed the osTicket application into the IIS web root, configured file permissions, enabling required PHP extensions, and completed the web-based setup process.
 
 ---
 
-## Step 1: Virtual Machine Creation:
+## Section 1: Virtual Machine Creation:
 
-<p>
+---
+
+### Step 1: Resource Group Creation
+
+ <p> 
 <img width="1624" height="971" alt="RG Creation" src="https://github.com/user-attachments/assets/ee5b6967-5219-4fad-ad2c-8d669de3d9f8" />
 </p>
 <p>
