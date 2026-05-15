@@ -27,13 +27,13 @@ This project outlines the prerequisites and installation of the open-source help
 
 <h2>High-level Overview</h2>
 
-- Section 1: VM Deployment - Covers the configuration and deployment of a Windows Server virtual machine in Microsoft Azure.
+- Section 1: Virtual Machine Creation - Covers the configuration and deployment of a Windows Server virtual machine in Microsoft Azure.
   
-- Section 2: Web Server and Application Stack Setup. - Installed and configured Internet Information Services (IIS) and osTicket dependencies for web app hosting.
+- Section 2: Web Server and osTicket prerequisites setup. - Installed and configured Internet Information Services (IIS) and osTicket dependencies for web app hosting.
 
 - Section 3: Database Configuration - Installed and configured MySQL, creating and connecting a database used by osTicket for ticket and user data storage.
   
-- Section 4: osTicket Deployment and Configuration. - Deployed the osTicket application into the IIS web root, configured file permissions, enabling required PHP extensions, and completed the web-based setup process.
+- Section 4: osTicket Deployment and Configuration - Deployed the osTicket application into the IIS web root, configured file permissions, enabling required PHP extensions, and completed the web-based setup process.
 
 ---
 
@@ -54,6 +54,8 @@ This project outlines the prerequisites and installation of the open-source help
 <br />
 
 ---
+
+### Step 2: Virtual Machine Configuration 
 
 <p>
 <img width="1624" height="971" alt="VM Nav" src="https://github.com/user-attachments/assets/096f3d9a-8299-432a-b931-a716c4d52cf6" />
@@ -84,7 +86,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- Continued configuring the virtual machine by selecting the  "Windows Server 2025 Datacenter X64 Gen2" image, allocating 2 VCPUs and 16GiB of memory for performance, and creating the local administrator account "labuser" with a secure password.
+- Configured the virtual machine by selecting the "Windows Server 2025 Datacenter X64 Gen2" image, allocating 2 VCPUs and 16GiB of memory for performance, and created the local administrator account "labuser" with a secure password.
 
 </p>
 <br />
@@ -127,14 +129,18 @@ This project outlines the prerequisites and installation of the open-source help
 
 ---
 
-## Step 2: Remoting into VM and preparing the environment.
+## Section 2: Web Server and osTicket prerequisites setup
+
+---
+
+### Step 1: Connected to the osTicket Windows VM via Remote Desktop
 
 <p>
 <img width="1624" height="971" alt="VM RDC Info" src="https://github.com/user-attachments/assets/05651b9c-ac99-4d3d-9633-000eee108379" />
 </p>
 <p>
 
-- PH
+- Noted Virtual Machine's public IP address to use for Remote Desktop.
 
 </p>
 <br />
@@ -145,18 +151,21 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Used the VM's public IP address and local administrator credentials in Remote Desktop to access the VM Windows environment. 
 
 </p>
 <br />
 
 ---
+
+### Step 2: Download and Prepare osTicket Installation Files
+
 <p>
 <img width="1624" height="971" alt="osTicket File Download" src="https://github.com/user-attachments/assets/b7ff2c18-d537-404d-a95e-1dc3065b9197" />
 </p>
 <p>
 
-- ph
+- Downloaded the osTicket installation package containing the required dependencies and setup files for the environment.
 
 </p>
 <br />
@@ -167,7 +176,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Extracted the zipped osTicket Installation Files to prepare for setup.
 
 </p>
 <br />
@@ -178,21 +187,21 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Verified the extracted installation directory contents, including HeidiSQL, MySQL, PHP, PHP Manager, Rewrite Module, and VC Redistributable.
 
 </p>
 <br />
 
 ---
 
-## Step 3: Installing required osTicket dependencies
+### Step 3: Configure Web Server Environment
 
 <p>
 <img width="1624" height="974" alt="Add Roles and Features" src="https://github.com/user-attachments/assets/d031c62e-76d6-4e63-8963-459d67672f60" />
 </p>
 <p>
 
-- ph
+- Opened Server Manager and navigated to "Add Roles and Features" to begin configuring the web server environment.
 
 </p>
 <br />
@@ -203,7 +212,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Enabled Internet Information Services (IIS) and required web server features.
 
 </p>
 <br />
@@ -214,7 +223,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Enabled CGI support within IIS and Application Development to support PHP processing for osTicket
 
 </p>
 <br />
@@ -225,7 +234,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Accessed the loopback address "127.0.0.1" in a web browser to verify that the web server was not active prior to IIS installation.
 
 </p>
 <br />
@@ -236,7 +245,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Successfully installed IIS and associated web server features required for osTicket hosting.
 
 </p>
 <br />
@@ -247,18 +256,21 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Accessed the loopback address 127.0.0.1 after IIS installation to verify that web server was now active after successfully installing IIS and associated web server features.
 
 </p>
 <br />
 
 ---
+
+### Step 4: Install osTicket Dependencies
+
 <p>
 <img width="1624" height="979" alt="Install PHP Manager" src="https://github.com/user-attachments/assets/73cc7512-1a9f-4122-b3f8-2f29dc9db2cb" />
 </p>
 <p>
 
-- ph
+- Opened and successfully installed "PHP Manager for IIS" from the osTicket Installation package to support PHP configuration within IIS.
 
 </p>
 <br />
@@ -269,7 +281,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Opened and successfully installed the "rewrite-amd64" module from the osTicket Installation package to support web application URL routing and functionality.
 
 </p>
 <br />
@@ -280,7 +292,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Created a "C:\PHP" directory and extracted the "PHP-7.3.8" installation files into the "C:\PHP" directory for IIS integration and osTicket support.
 
 </p>
 <br />
@@ -292,7 +304,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Verified that the PHP installation files were successfully extracted to the "C:\PHP" directory.
 
 </p>
 <br />
@@ -303,21 +315,25 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Opened and successfuly installed "VC-redist_x86" from the osTicket Installation package, providing the required runtime libraries needed for PHP and related components to function correctly.
 
 </p>
 <br />
 
 ---
 
-## Step 4: Configured MySQL and created database
+## Section 3: Database Configuration
+
+---
+
+### Step 1: Install and Configure MySQL
 
 <p>
 <img width="1624" height="979" alt="Install MySQL" src="https://github.com/user-attachments/assets/4586eff9-472a-45ee-9282-d2dc958b0356" />
 </p>
 <p>
 
-- ph
+- Successfully installed "mysql-5.5.62" and launched the MySQL Instance Configuration Wizard to configure the database server environment.
 
 </p>
 <br />
@@ -328,7 +344,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Configured the MySQL server instance using the "Standard Configuration" option.
 
 </p>
 <br />
@@ -339,7 +355,9 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Configured MySQL root account credentials required for osTicket database integration.
+
+- Note: Credentials used in this lab environment were simplified for instructional purposes. In production environments, least privilege principles and secure credential management practices should be implemented.
 
 </p>
 <br />
@@ -349,21 +367,25 @@ This project outlines the prerequisites and installation of the open-source help
 <img width="1624" height="985" alt="MySQL Config Finish" src="https://github.com/user-attachments/assets/8c44590e-0391-4968-ad9c-f310f8c0fd2f" />
 <p>
 
-- ph
+- Completed the MySQL Server Instance Configuration Wizard, enabling the database environment needed for osTicket integration.
 
 </p>
 <br />
 
 ---
 
-## Step 5: Deployed and configured the osTicket help desk platform within the IIS web server environment.
+## Section 4: osTicket Configuration and Deployment
+
+---
+
+### Step 1: Configure PHP Manager within IIS
 
 <p>
 <img width="1624" height="974" alt="IIS Manager" src="https://github.com/user-attachments/assets/e156aa88-b87a-43d0-bf37-7f9f4d95323f" />
 </p>
 <p>
 
-- ph
+- Opened Server Manager and navigated to "Internet Information Services (IIS) Manager" to begin configuring PHP integration for the osTicket environment.
 
 </p>
 <br />
@@ -374,40 +396,21 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Registered a new PHP version within PHP Manager, using the previously made PHP folder to provide a path to the PHP executable file as "C:\PHP\php-cgi.exe".
 
 </p>
 <br />
 
 ---
+
+### Step 2: Install and configure osTicket files
+
 <p>
 <img width="1624" height="976" alt="Extract osTicket" src="https://github.com/user-attachments/assets/82161d92-d15b-4238-845b-4232c7ce3680" />
 </p>
 <p>
 
-- ph
-
-</p>
-<br />
-
----
-<p>
-<img width="1624" height="976" alt="osTicket Extracted" src="https://github.com/user-attachments/assets/6789440f-e101-4e6a-a29e-1120dec4f7c0" />
-</p>
-<p>
-
-- ph
-
-</p>
-<br />
-
----
-<p>
-<img width="1624" height="976" alt="Copied Upload" src="https://github.com/user-attachments/assets/3c9ba4e4-1c63-4748-975f-1631b4808fed" />
-</p>
-<p>
-
-- ph
+- Opened and extracted the "osTicket-v1.15.8" file within the osTicket Installation package to the desktop.
 
 </p>
 <br />
@@ -418,7 +421,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Copied the “upload” folder from the extracted osTicket package into “c:\inetpub\wwwroot”, renaming it to "osTicket" within the wwwroot folder to prepare the application for IIS hosting.
 
 </p>
 <br />
@@ -429,7 +432,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Navigated to the osTicket site within IIS Manager and verified that the web server is successfully hosting the osTicket application.
 
 </p>
 <br />
@@ -440,7 +443,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Within PHP Manager in IIS Manager, enabled required PHP extensions, including php_imap and php_intl, to support full osTicket functionality. Verified the changes were reflected in the osTicket web interface.
 
 </p>
 <br />
@@ -451,7 +454,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Navigated to "C:\inetpub\wwwroot\osTicket\include" in File Explorer and renamed "ost-sampleconfig.php" to "ost-config.php".
 
 </p>
 <br />
@@ -462,7 +465,9 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Opened the security properties for "ost-config.php", disabled permission inheritance, and removed existing inherited permissions. Assigned full control permissions to Everyone to allow osTicket to write configuration data during setup.
+
+- Note: Granting full control to Everyone is only for lab installation purposes only. In production environments, file permissions should be restricted using the principle of least privilege to prevent unauthorized access or modification.
 
 </p>
 <br />
@@ -473,19 +478,22 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Continued osTicket setup through the web interface by configuring administrative account settings. Database configuration fields remained uncompleted at this stage, as the MySQL database had not yet been fully created and connected via HeidiSQL.
 
 </p>
 <br />
 
 ---
+
+### Step 3: Install and Configure HeidiSQL Database
+
 <p>
 <img width="1624" height="979" alt="Install HeidiSQL" src="https://github.com/user-attachments/assets/1e82d9a8-569b-487b-946f-aadd0bc507ab" />
 
 </p>
 <p>
 
-- ph
+- Opened and installed HeidiSQL in the osTicket Installation package, launching HeidiSQL to configure database. 
 
 </p>
 <br />
@@ -496,7 +504,7 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Created a new HeidiSQL session using MySQL root credentials (root/root), connecting to the database server.
 
 </p>
 <br />
@@ -507,29 +515,21 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Created a new databse called "osTicket", allowing application data to be stored.
 
 </p>
 <br />
 
 ---
-<p>
-<img width="1624" height="979" alt="osTicket Database" src="https://github.com/user-attachments/assets/30ee25eb-b247-4265-8b2b-17b1fa84ec0b" />
-</p>
-<p>
 
-- ph
+### Step 4: Finalizing osTicket deployment
 
-</p>
-<br />
-
----
 <p>
 <img width="1624" height="979" alt="Setup Finish" src="https://github.com/user-attachments/assets/35531f61-8a5e-4797-85ca-ee356d6b1097" /> 
 </p>
 <p>
 
-- ph
+- Completed osTicket setup through the web interface by configuring the MySQL database name and credentials, finalizing the installation of the application.
 
 </p>
 <br />
@@ -540,7 +540,8 @@ This project outlines the prerequisites and installation of the open-source help
 </p>
 <p>
 
-- ph
+- Successfully completed the osTicket installation process, confirmed by the “Congratulations” page indicating full deployment of the application.
+
 </p>
 <br />
 
